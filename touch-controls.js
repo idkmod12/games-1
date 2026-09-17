@@ -4,7 +4,8 @@
   if (window.__mlvTouchControls) return;
   window.__mlvTouchControls = true;
   const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-  const touchCapable = 'ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0;
+  const ua = navigator.userAgent || '';
+  const touchCapable = (navigator.maxTouchPoints || 0) > 1 && /iPad|iPhone|iPod|Android|Macintosh/i.test(ua);
   if (!coarse && !touchCapable) return;
 
   const keys = [
