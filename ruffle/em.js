@@ -12,7 +12,7 @@ window.RufflePlayer.config = {
   favorFlash: true,
   playerRuntime: "flashPlayer",
   allowFullscreen: true,
-  publicPath: "/ruffle/"
+  publicPath: new URL("/ruffle/", window.location.origin).href
 };
 window.PlayerObject = null;
 window.addEventListener("load", function () {
@@ -30,3 +30,4 @@ var fullscreenButton = document.getElementById("fullscreen");
 if (fullscreenButton) fullscreenButton.addEventListener("click", function () {
   if (window.PlayerObject && window.PlayerObject.enterFullscreen) window.PlayerObject.enterFullscreen();
 });
+
