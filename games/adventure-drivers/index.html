@@ -5,17 +5,15 @@
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Adventure Drivers</title>
-  <base href="https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/">
   <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;touch-action:none;-webkit-user-select:none;user-select:none}#gamecanvas{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none}</style>
 </head>
 <body>
   <canvas id="gamecanvas" width="640" height="360" aria-label="Adventure Drivers"></canvas>
   <script>
     window.famobi_gameID = 'adventure-drivers';
-    window.famobi_analytics = {trackEvent:function(){},trackScreen:function(){},trackStats:function(){}};
-    window.famobi = {localStorage:window.localStorage,sessionStorage:window.sessionStorage,hasFeature:function(){return false;},getFeatureProperties:function(){return {};},getVolume:function(){return 1;},getMoreGamesButtonImage:function(){return '';},getBrandingButtonImage:function(){return '';},showAd:function(done){if(done)done();},onRequest:function(){},onOffsetChange:function(){},playerReady:function(){},gameReady:function(){},setPreloadProgress:function(){},moreGamesLink:'',json:{gameParams:{features:{}}}};
+    window.famobi_gameJS = ['js/all.js', function(){ if(window.Main && Main.main) Main.main(); }];
   </script>
-  <script src="js/all.js"></script>
-  <script>(function start(){if(window.Main&&typeof window.Main.main==='function')window.Main.main();else window.setTimeout(start,50);}());</script>
+  <script src="famobi-api.js"></script>
+    <base href="https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/">
 </body>
 </html>
