@@ -22,6 +22,7 @@
           window.famobi.showVideoAd = window.famobi.showAd;
           window.famobi.showRewardedAd = window.famobi.showAd;
           window.famobi.showInterstitialAd = function(){ return done(false); };
+          if (window.famobi_analytics) window.famobi_analytics.trackEvent = function(){ return done(true); };
         }());
       </script>
 </body>
