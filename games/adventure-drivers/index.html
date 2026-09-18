@@ -7,13 +7,15 @@
   <title>Adventure Drivers</title>
   <base href="https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/">
   <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;touch-action:none;-webkit-user-select:none;user-select:none}#gamecanvas{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none}</style>
-  <script>
-    window.addEventListener('touchmove',function(e){e.preventDefault()},{passive:false});
-    window.famobi_gameID='adventure-drivers';
-    window.famobi_gameJS=['js/all.js',function(){if(window.Main&&Main.main)Main.main();}];
-    (function(d){var s=d.createElement('script');s.src='https://api.famobi.com/gameapi/script/7adef9f1-9ddd-437a-b5ee-196da61ba5c7/4638e320-4444-4514-81c4-d80a8c662371?_location='+encodeURIComponent('https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/index.html');s.async=false;d.head.appendChild(s)})(document);
-  </script>
 </head>
-<body><canvas id="gamecanvas" width="640" height="360" aria-label="Adventure Drivers"></canvas></body>
+<body>
+  <canvas id="gamecanvas" width="640" height="360" aria-label="Adventure Drivers"></canvas>
+  <script>
+    window.famobi_gameID = 'adventure-drivers';
+    window.famobi_analytics = {trackEvent:function(){},trackScreen:function(){},trackStats:function(){}};
+    window.famobi = {localStorage:window.localStorage,sessionStorage:window.sessionStorage,hasFeature:function(){return false;},getFeatureProperties:function(){return {};},getVolume:function(){return 1;},getMoreGamesButtonImage:function(){return '';},getBrandingButtonImage:function(){return '';},showAd:function(done){if(done)done();},onRequest:function(){},onOffsetChange:function(){},playerReady:function(){},gameReady:function(){},setPreloadProgress:function(){},moreGamesLink:'',json:{gameParams:{features:{}}}};
+  </script>
+  <script src="js/all.js"></script>
+  <script>(function start(){if(window.Main&&typeof window.Main.main==='function')window.Main.main();else window.setTimeout(start,50);}());</script>
+</body>
 </html>
-
