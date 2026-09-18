@@ -14,6 +14,15 @@
     window.famobi_gameJS = ['js/all.js', function(){ if(window.Main && Main.main) Main.main(); }];
   </script>
   <script src="famobi-api.js"></script>
-    <base href="https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/">
+    <base href="https://games.cdn.famobi.com/html5games/a/adventure-drivers/v060/">      <script>
+        (function bypassUnavailableAds(){
+          if (!window.famobi) { window.setTimeout(bypassUnavailableAds, 25); return; }
+          var done = function(result){ return Promise.resolve(result || false); };
+          window.famobi.showAd = function(callback){ if (typeof callback === 'function') callback(false); return done(false); };
+          window.famobi.showVideoAd = window.famobi.showAd;
+          window.famobi.showRewardedAd = window.famobi.showAd;
+          window.famobi.showInterstitialAd = function(){ return done(false); };
+        }());
+      </script>
 </body>
 </html>
